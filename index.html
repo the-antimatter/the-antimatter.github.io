@@ -1,0 +1,62 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Antimatter</title>
+<style>
+  :root {
+    color-scheme: light dark;
+    --bg: #FFFFFF;
+    --fg: #000000;
+    --muted: #666666;
+  }
+  @media (prefers-color-scheme: dark) {
+    :root { --bg: #000000; --fg: #FFFFFF; --muted: #999999; }
+  }
+  * { box-sizing: border-box; }
+  html, body {
+    margin: 0;
+    height: 100%;
+    background: var(--bg);
+    color: var(--fg);
+  }
+  body {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-family: "SFMono-Regular", Consolas, "Liberation Mono", Menlo, monospace;
+    text-align: center;
+    padding: 24px;
+  }
+  main {
+    max-width: 480px;
+  }
+  h1 {
+    font-size: clamp(28px, 6vw, 44px);
+    letter-spacing: 0.3em;
+    margin: 0 0 16px;
+  }
+  .rule {
+    width: 48px;
+    height: 1px;
+    background: var(--fg);
+    margin: 0 auto 16px;
+  }
+  p {
+    font-size: 14px;
+    letter-spacing: 0.15em;
+    text-transform: uppercase;
+    color: var(--muted);
+    margin: 0;
+  }
+</style>
+</head>
+<body>
+  <main>
+    <h1>ANTIMATTER</h1>
+    <div class="rule"></div>
+    <p>Knowledge is power</p>
+  </main>
+</body>
+</html>
