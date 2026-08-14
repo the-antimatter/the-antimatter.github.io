@@ -4,36 +4,37 @@
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <title>Antimatter</title>
+<meta name="description" content="Antimatter LLC — an independent software studio building small, focused tools. Currently developing Sundew, a carnivorous plant collection manager.">
 <style>
   :root {
     color-scheme: light dark;
     --bg: #FFFFFF;
     --fg: #000000;
     --muted: #666666;
+    --border: #CCCCCC;
   }
   @media (prefers-color-scheme: dark) {
-    :root { --bg: #000000; --fg: #FFFFFF; --muted: #999999; }
+    :root { --bg: #000000; --fg: #FFFFFF; --muted: #999999; --border: #333333; }
   }
   * { box-sizing: border-box; }
   html, body {
     margin: 0;
-    height: 100%;
     background: var(--bg);
     color: var(--fg);
   }
   body {
-    display: flex;
-    align-items: center;
-    justify-content: center;
     font-family: "SFMono-Regular", Consolas, "Liberation Mono", Menlo, monospace;
-    text-align: center;
-    padding: 24px;
   }
   main {
-    max-width: 480px;
+    max-width: 640px;
+    margin: 0 auto;
+    padding: 80px 24px 64px;
+  }
+  header {
+    margin-bottom: 56px;
   }
   h1 {
-    font-size: clamp(28px, 6vw, 44px);
+    font-size: clamp(28px, 6vw, 40px);
     letter-spacing: 0.3em;
     margin: 0 0 16px;
   }
@@ -41,30 +42,100 @@
     width: 48px;
     height: 1px;
     background: var(--fg);
-    margin: 0 auto 16px;
+    margin-bottom: 16px;
   }
-  p {
-    font-size: 14px;
+  .tagline {
+    font-size: 13px;
     letter-spacing: 0.15em;
     text-transform: uppercase;
     color: var(--muted);
     margin: 0;
   }
-  .description {
-    font-size: 12px;
-    letter-spacing: 0.08em;
-    text-transform: none;
-    margin-top: 20px;
+  section {
+    padding: 32px 0;
+    border-top: 1px solid var(--border);
   }
+  h2 {
+    font-size: 11px;
+    letter-spacing: 0.25em;
+    text-transform: uppercase;
+    color: var(--muted);
+    margin: 0 0 16px;
+    font-weight: 500;
+  }
+  p {
+    font-size: 14px;
+    line-height: 1.7;
+    letter-spacing: 0.02em;
+    margin: 0 0 12px;
+  }
+  p:last-child { margin-bottom: 0; }
+  .product-name {
+    font-weight: bold;
+    letter-spacing: 0.1em;
+  }
+  ul {
+    margin: 12px 0 0;
+    padding: 0;
+    list-style: none;
+  }
+  li {
+    font-size: 13px;
+    letter-spacing: 0.02em;
+    color: var(--muted);
+    padding: 6px 0;
+    border-top: 1px solid var(--border);
+  }
+  li:first-child { border-top: none; }
+  footer {
+    padding-top: 32px;
+    border-top: 1px solid var(--border);
+    font-size: 12px;
+    letter-spacing: 0.05em;
+    color: var(--muted);
+  }
+  a { color: inherit; }
 </style>
 </head>
 <body>
   <main>
-    <h1>ANTIMATTER</h1>
-    <div class="rule"></div>
-    <p>Knowledge is power</p>
-    <p class="description">Independent software studio — currently building Sundew, a carnivorous plant care manager.</p>
-    <p class="description">Then on to more projects.</p>
+    <header>
+      <h1>ANTIMATTER</h1>
+      <div class="rule"></div>
+      <p class="tagline">Knowledge is power</p>
+    </header>
+
+    <section>
+      <h2>About</h2>
+      <p>
+        Antimatter is an independent software studio. We build small, focused
+        tools and take the time to do them well, rather than shipping
+        something broad and unfinished.
+      </p>
+    </section>
+
+    <section>
+      <h2>Current Product</h2>
+      <p><span class="product-name">Sundew</span> — a collection-tracking app for carnivorous plant growers.</p>
+      <ul>
+        <li>Track genus, species, cultivar, and climate type per plant</li>
+        <li>Log watering and feeding, with dormancy-window tracking</li>
+        <li>Record substrate recipes and growing environments</li>
+        <li>Keep a photo timeline and a wishlist for plants you're after</li>
+      </ul>
+    </section>
+
+    <section>
+      <h2>What's Next</h2>
+      <p>
+        Sundew is our first release. Once it's out, we're moving on to more
+        projects in the same spirit — useful, well-made, and built to last.
+      </p>
+    </section>
+
+    <footer>
+      <p>Antimatter LLC &middot; <a href="mailto:antimatter@the-antimatter.com">antimatter@the-antimatter.com</a></p>
+    </footer>
   </main>
 </body>
 </html>
