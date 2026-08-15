@@ -149,12 +149,20 @@
     right: 0;
     display: flex;
     justify-content: space-between;
+    gap: 12px;
     font-size: 9px;
     letter-spacing: 0.2em;
     color: var(--dim);
     text-transform: uppercase;
     opacity: 0;
     animation: rise 0.8s cubic-bezier(0.16, 1, 0.3, 1) 1.6s forwards;
+  }
+  .status span { white-space: nowrap; }
+  @media (max-width: 360px) {
+    .status {
+      font-size: 8px;
+      letter-spacing: 0.08em;
+    }
   }
   .status .dot {
     display: inline-block;
@@ -182,7 +190,7 @@
     text-transform: uppercase;
     text-decoration: none;
     opacity: 0;
-    animation: rise 0.8s cubic-bezier(0.16, 1, 0.3, 1) 1.9s forwards;
+    animation: riseCentered 0.8s cubic-bezier(0.16, 1, 0.3, 1) 1.9s forwards;
   }
   .scroll-cue .line {
     width: 1px;
@@ -295,6 +303,10 @@
   @keyframes rise {
     from { opacity: 0; transform: translateY(12px); }
     to { opacity: 1; transform: translateY(0); }
+  }
+  @keyframes riseCentered {
+    from { opacity: 0; transform: translateX(-50%) translateY(12px); }
+    to { opacity: 1; transform: translateX(-50%) translateY(0); }
   }
   @keyframes grow {
     from { height: 0; opacity: 0; }
